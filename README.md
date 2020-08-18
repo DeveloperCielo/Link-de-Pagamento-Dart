@@ -108,9 +108,9 @@ Caso a entrega for do tipo **Loggi** a instancia de **PaymentLinkRequest**, deve
 
 ```dart
   var request = PaymentLinkRequest(
-    name: "your product name",
+    name: 'your product name',
     type: TypeProduct.ASSET,
-    price: "200000",
+    price: '200000',
     description: 'description of your product',
     maxNumberOfInstallments: '10',
     expirationDate: '2025-01-01',
@@ -118,15 +118,15 @@ Caso a entrega for do tipo **Loggi** a instancia de **PaymentLinkRequest**, deve
     shipping: ShippingProduct(
       type: ShippingType.LOGGI,
       pickupData: PickupDataProduct(
-          street: "Praça da Sé",
-          number: "123",
-          district: "Sé",
-          city: "São Paulo",
-          state: "SP",
-          zipCode: "01001001",
-          complement: "Loja One 12B",
-          contactPhone: "1198765543",
-          deliveryInstructions: "delivery instructions"),
+          street: 'Praça da Sé',
+          number: '123',
+          district: 'Sé',
+          city: 'São Paulo',
+          state: 'SP',
+          zipCode: '01001001',
+          complement: 'Loja One 12B',
+          contactPhone: '1198765543',
+          deliveryInstructions: 'delivery instructions'),
       package: PackageProduct(
         weight: 200,
         dimension: DimensionProduct(
@@ -184,10 +184,10 @@ No exemplo abaixo foi capturado usando um FutureBuilder ou StreamBuilder:
 ...
 if (snapshot.hasError) {
                       ErrorResponse errors = snapshot.error;
-                      print("--------------------------------------");
+                      print('--------------------------------------');
                       print('Status Code => ${errors.code}');
                       print('Message => ${errors.message}');
-                      print("--------------------------------------");
+                      print('--------------------------------------');
                       return Container();
                     }
 ...
