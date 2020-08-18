@@ -1,0 +1,1 @@
+enum PaymentLinkEnvironment { SANDBOX, PRODUCTION }

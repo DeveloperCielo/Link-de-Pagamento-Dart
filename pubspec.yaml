@@ -1,0 +1,22 @@
+name: cielo_payment_link
+description: A Flutter package that helps the shopkeeper create payment links. Its main objective is to allow stores to create links, through their own application and share with their customers, without the need to access the Backoffice.
+version: 1.0.0
+homepage: https://github.com/developercielo/link-de-pagamento-dart
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  dio: ">=3.0.9 <4.0.0"
+  cielo_oauth: ^1.0.2
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  test: ^1.0.2+3
+
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
