@@ -17,7 +17,7 @@ O SDK permite ao lojista criar links de pagamentos. Seu principal objetivo é pe
 
 ```yaml
     dependencies:
-      cielo_payment_link: ^1.0.0
+      cielo_payment_link: ^1.0.2
 ```
 
  ## Utilização
@@ -37,6 +37,8 @@ var paymentLink = PaymentLink(
         clientSecret: 'your client secret',
         environment: PaymentLinkEnvironment.SANDBOX);
 ```
+
+
 
 ***PaymentLink:**
 
@@ -64,6 +66,8 @@ Logo ápos instanciar o *PaymentLink*, instancie `PaymentLinkRequest` como exemp
           originZipcode: '06018953'));
 ```
 
+
+
 ***PaymentLinkRequest:**
 
 | Parâmetro                | Descrição                                                                 | Tipo            | Obrigatório |
@@ -80,6 +84,8 @@ Logo ápos instanciar o *PaymentLink*, instancie `PaymentLinkRequest` como exemp
 | Shipping                 | Nó contendo informações de entrega do produto.                            | ShippingProduct | SIM         |
 | Recurrent                | Nó contendo informações caso o tipo do produto for Recorrência.           | Recurrent       | NÃO. Obrigatório apenas para cobrança do tipo recorrência. |
 
+
+
 ***ShippingProduct:** 
 
 | Parâmetro       | Descrição                                                                     | Tipo    | Obrigatório                                               |
@@ -90,6 +96,8 @@ Logo ápos instanciar o *PaymentLink*, instancie `PaymentLinkRequest` como exemp
 | OriginZipcode   | Cep de origem da encomenda.                                     | String  | NÃO. Obrigatório para frete tipo “Correios”. Deve conter apenas números.|
 | PickUpData      | Nó contendo endereço de retirada do produto caso o tipo de entrega for Loggi. | PickUpDataProduct  |  NÃO. Obrigatório para frete do tipo Loggi.    |
 | Package         | Nó contendo informações do pacote, caso o tipo de entrega for Loggi.          | PackageProduct  | NÃO. Obrigatório para frete do tipo Loggi.        |  
+
+
 
 ***Recurrent:**
 
@@ -143,6 +151,8 @@ Caso a entrega for do tipo **Loggi** a instancia de `PaymentLinkRequest`, dever�
   );
 ```
 
+
+
 ***PickupDataProduct:**
 
 | Parâmetro                | Descrição                                  | Tipo    | Obrigatório |
@@ -157,12 +167,16 @@ Caso a entrega for do tipo **Loggi** a instancia de `PaymentLinkRequest`, dever�
 | ContactPhone             |    Telefone de contato.                    | String  | SIM         |
 | DeliveryInstructions     |    Instruções de entrega.                  | String  |  SIM        |
 
+
+
 ***PackageProduct:**
 
 | Parâmetro  | Descrição                                               | Tipo              | Obrigatório |
 | :----------| :------------------------------------------------------ | :---------------: | :---------: |
 | Weight     |  Campo para informar o peso do pacote (dado em gramas). | int               | SIM         |
 | Dimension  | Dimensão do pacote.                                     | DimensionProduct  | SIM         |
+
+
 
 ***DimensionProduct:**
 

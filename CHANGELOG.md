@@ -2,6 +2,6 @@
 
 - Initial release of the library.
 
-## [1.0.1] - 20/08/2020
+## [1.0.2] - 20/08/2020
 
 - Readme improved.
