@@ -26,9 +26,13 @@ class PaymentLinkClient {
 
       _containsErrorOAuth(responseOAuth);
 
+      String sdkName = 'cielo_payment_link';
+      String sdkVersion = '1.1.0';
+
       dio.options
         ..baseUrl = _baseUrl(environment)
         ..headers['content-type'] = 'application/json'
+        ..headers['x-sdk-version'] = '$sdkName\_dart@$sdkVersion'
         ..headers['authorization'] =
             'Bearer ${responseOAuth.accessTokenResponse.accessToken}';
 
@@ -102,12 +106,15 @@ dynamic _containsErrorOAuth(AccessTokenResult responseOAuth) {
 }
 
 ErrorResponse _getErrorPaymentLink(DioError e) {
-  PaymentLinkError paymentLinkError =
-      PaymentLinkError.fromJson(e.response.data[0]);
+  PaymentLinkError paymentLinkError = e.response.data[0] != null
+      ? PaymentLinkError.fromJson(e.response.data[0])
+      : PaymentLinkError.fromJson(e.response.data);
 
   var message = '${e.response.statusCode} ${e.response.statusMessage}';
 
+  var field =
+      paymentLinkError.field != null ? '${paymentLinkError.field} -' : '';
+
   throw ErrorResponse(
-      code: message,
-      message: '${paymentLinkError.field} ${paymentLinkError.message}');
+      code: message, message: '$field ${paymentLinkError.message}');
 }

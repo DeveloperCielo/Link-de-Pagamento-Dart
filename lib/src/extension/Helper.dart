@@ -78,7 +78,7 @@ String recurrentIntervalHelper(RecurrentInterval interval) {
   }
 }
 
-dynamic zipCodeHelper(dynamic zipCode) {
+dynamic zipCodeHelper(String zipCode) {
   if (zipCode != null && zipCode.length == 8 && _isNumeric(zipCode)) {
     var value = zipCode.replaceAllMapped(
         RegExp(r".{5}"), (match) => "${match.group(0)}-");

@@ -46,10 +46,10 @@ packages:
   cielo_payment_link:
     dependency: "direct main"
     description:
-      path: "/Users/felipe/Desktop/cielo_payment_link"
+      path: "/Users/felipe/Desktop/Link-de-Pagamento-Dart"
       relative: false
     source: path
-    version: "0.0.1"
+    version: "1.1.0"
   collection:
     dependency: transitive
     description:

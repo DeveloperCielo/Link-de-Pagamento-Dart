@@ -21,7 +21,7 @@ O SDK permite ao lojista criar links de pagamentos. Seu principal objetivo é pe
 ```
 
  ## Utilização
-Para iniciar com o SDK será necessário importar o pacote abaixo:
+- Para iniciar com o SDK será necessário importar o pacote abaixo:
 
 ```dart
 import 'package:cielo_payment_link/payment_link.dart';
@@ -48,7 +48,7 @@ var paymentLink = PaymentLink(
 | ClientSecret | Chave que valida o ClientID. Fornecida pela Cielo junto ao ClientID. | String                  | SIM         |
 | Environment  | Ambiente de Desenvolvimento.                                         | PaymentLinkEnvironment  |NÃO. Caso não seja informado o SDK ultilizará **SANDBOX**.|
 
-Logo ápos instanciar o *PaymentLink*, instancie `PaymentLinkRequest` como exemplo abaixo:
+- Logo ápos instanciar o *PaymentLink*, instancie `PaymentLinkRequest` como exemplo abaixo:
 
 ```dart
   var request = PaymentLinkRequest(
@@ -107,7 +107,7 @@ Logo ápos instanciar o *PaymentLink*, instancie `PaymentLinkRequest` como exemp
 | EndDate         | Data final de cobrança da recorrência. Obs: YYYY-MM-DD.| String             |  NÃO                                     |
 
 
-Após instanciar o *PaymentLink* e *PaymentLinkRequest* podemos efetuar a chamada do SDK, para receber um `PaymentLinkResponse`: 
+- Após instanciar o *PaymentLink* e *PaymentLinkRequest* podemos efetuar a chamada do SDK, para receber um `PaymentLinkResponse`: 
 
 ```dart
   PaymentLinkResponse response = await paymentLink.create(request: request);
@@ -116,7 +116,7 @@ Após instanciar o *PaymentLink* e *PaymentLinkRequest* podemos efetuar a chamad
 
 ## Ultilização com Loggi
 
-Caso a entrega for do tipo **Loggi** a instancia de `PaymentLinkRequest`, deverá conter informações de dados da coleta e do pacote que será entregue (`PickupDataProduct` e `PackageProduct`) assim como no exemplo abaixo:
+- Caso a entrega for do tipo **Loggi** a instancia de `PaymentLinkRequest`, deverá conter informações de dados da coleta e do pacote que será entregue (`PickupDataProduct` e `PackageProduct`) assim como no exemplo abaixo:
 
 ```dart
   var request = PaymentLinkRequest(
@@ -186,14 +186,14 @@ Caso a entrega for do tipo **Loggi** a instancia de `PaymentLinkRequest`, dever�
 | Height      | Campo para informar altura do pacote (dado em centimetros).       | int  | SIM         |
 | Width       | Campo para informar a largura do pacote (dado em centimetros).    | int  | SIM         | 
 
-Após instanciar o *PaymentLink* e *PaymentLinkRequest* podemos efetuar a chamada do SDK, para receber um `PaymentLinkResponse`: 
+- Após instanciar o *PaymentLink* e *PaymentLinkRequest* podemos efetuar a chamada do SDK, para receber um `PaymentLinkResponse`: 
 
 ```dart
   PaymentLinkResponse response = await paymentLink.create(request: request);
   return response;
 ```
 
-Caso ocorrá algum erro, temos o `ErrorResponse`.
+- Caso ocorrá algum erro, temos o `ErrorResponse`.
 No exemplo abaixo foi capturado usando um FutureBuilder ou StreamBuilder:
 
 ```dart
@@ -213,4 +213,4 @@ if (snapshot.hasError) {
 
 ## Manual
 
-Para mais informações sobre a integração com a API de Link de Pagamentos, vide o manual em: [Link de Pagamento] (https://developercielo.github.io/manual/linkdepagamentos5)
+Para mais informações sobre a integração com a API de Link de Pagamentos, vide o manual em: [Link de Pagamento](https://developercielo.github.io/manual/linkdepagamentos5)

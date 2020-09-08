@@ -21,7 +21,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  cielo_payment_link: ^1.0.2
+  cielo_payment_link: ^1.1.0
 
   flutter:
     sdk: flutter
