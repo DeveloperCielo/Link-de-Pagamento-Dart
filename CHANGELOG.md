@@ -10,3 +10,7 @@
 
 - Bug fixes and code improvements.
 - Readme improved.
+
+## [1.1.1] - 08/09/2020
+
+- Update readme.

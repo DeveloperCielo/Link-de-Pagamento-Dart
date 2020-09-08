@@ -17,7 +17,7 @@ O SDK permite ao lojista criar links de pagamentos. Seu principal objetivo é pe
 
 ```yaml
     dependencies:
-      cielo_payment_link: ^1.0.2
+      cielo_payment_link: ^1.1.1
 ```
 
  ## Utilização
