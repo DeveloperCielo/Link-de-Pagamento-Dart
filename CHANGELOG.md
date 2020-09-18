@@ -14,3 +14,7 @@
 ## [1.1.1] - 08/09/2020
 
 - Update readme.
+
+## [1.1.2] - 17/09/2020
+
+- Code Improvements.

@@ -26,13 +26,13 @@ class PaymentLinkClient {
 
       _containsErrorOAuth(responseOAuth);
 
-      String sdkName = 'cielo_payment_link';
-      String sdkVersion = '1.1.0';
+      String sdkName = 'CieloPaymentLink';
+      String sdkVersion = '1.1.2';
 
       dio.options
         ..baseUrl = _baseUrl(environment)
         ..headers['content-type'] = 'application/json'
-        ..headers['x-sdk-version'] = '$sdkName\_dart@$sdkVersion'
+        ..headers['x-sdk-version'] = '$sdkName-Dart@$sdkVersion'
         ..headers['authorization'] =
             'Bearer ${responseOAuth.accessTokenResponse.accessToken}';
 
